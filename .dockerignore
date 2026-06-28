@@ -1,0 +1,8 @@
+node_modules
+.output
+.vite
+dist
+.git
+.env
+.env.local
+*.log

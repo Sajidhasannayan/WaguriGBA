@@ -1,0 +1,19 @@
+# Render.com blueprint — push this repo to GitHub, then "New + → Blueprint" on Render.
+services:
+  - type: web
+    name: waguri-gba
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build:node
+    startCommand: npm run start
+    envVars:
+      - key: DEPLOY_TARGET
+        value: node
+      - key: NODE_VERSION
+        value: "22"
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: IMGBB_API_KEY
+        sync: false
